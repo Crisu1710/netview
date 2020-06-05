@@ -109,12 +109,12 @@
           color: this.editedColor,
       }
       this.$emit('reloadfavorites')
-      this.$http.put('http://localhost:3000/api/favorites/' + this.id, body).then();
+      this.$http.put('http://192.168.213.15:3000/api/favorites/' + this.id, body).then();
       this.dialog = false
     },
     onDelete () {
     this.$emit('reloadfavorites')
-    this.$http.delete('http://localhost:3000/api/favorites/' + this.id).then();
+    this.$http.delete('http://192.168.213.15:3000/api/favorites/' + this.id).then();
     this.dialog = false
     }
   },

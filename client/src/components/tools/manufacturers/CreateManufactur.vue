@@ -50,7 +50,7 @@
           note: this.note,
       }
       this.$emit('reloadmanufacturers')
-      this.$http.post('http://localhost:3000/api/manufacturers', body).then();
+      this.$http.post('http://192.168.213.15:3000/api/manufacturers', body).then();
       this.dialog = false
     }
   }

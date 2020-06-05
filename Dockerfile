@@ -1,7 +1,7 @@
 FROM node:alpine
 MAINTAINER Robin Schneider <m2rs@posteo.de>
 ENV MODE=DEV
-ENV SQL_HOST=localhost
+ENV SQL_HOST=192.168.213.15
 ENV SQL_PW=password
 ENV SQL_USER=root
 RUN npm install -g serve

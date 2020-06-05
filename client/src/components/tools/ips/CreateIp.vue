@@ -93,18 +93,18 @@
           uiport: this.uiport,
       }
       this.$emit('reloadItem')
-      this.$http.post('http://localhost:3000/api/ips', body).then();
+      this.$http.post('http://192.168.213.15:3000/api/ips', body).then();
       //this.dialog = false
     }
   },
   created() {
-    this.$http.get("http://localhost:3000/api/manufacturers").then(function(data){
+    this.$http.get("http://192.168.213.15:3000/api/manufacturers").then(function(data){
       this.manufacturers = data.body //get request data and send it do return items
     });
-    this.$http.get("http://localhost:3000/api/devices").then(function(data){
+    this.$http.get("http://192.168.213.15:3000/api/devices").then(function(data){
       this.devices = data.body //get request data and send it do return items
     });
-    this.$http.get("http://localhost:3000/api/subnets").then(function(data){
+    this.$http.get("http://192.168.213.15:3000/api/subnets").then(function(data){
       this.subnets = data.body //get request data and send it do return items
     });
   }

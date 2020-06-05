@@ -56,12 +56,12 @@
           note: this.editedNote,
       }
       this.$emit('reloadmanufacturers')
-      this.$http.put('http://localhost:3000/api/manufacturers/' + this.id, body).then();
+      this.$http.put('http://192.168.213.15:3000/api/manufacturers/' + this.id, body).then();
       this.dialog = false
     },
     onDelete () {
     this.$emit('reloadmanufacturers')
-    this.$http.delete('http://localhost:3000/api/manufacturers/' + this.id).then();
+    this.$http.delete('http://192.168.213.15:3000/api/manufacturers/' + this.id).then();
     this.dialog = false
     }
   }

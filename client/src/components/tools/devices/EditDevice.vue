@@ -63,12 +63,12 @@
           amount: this.editedAmount
       }
       this.$emit('reloaddevices')
-      this.$http.put('http://localhost:3000/api/devices/' + this.id, body).then();
+      this.$http.put('http://192.168.213.15:3000/api/devices/' + this.id, body).then();
       this.dialog = false
     },
     onDelete () {
     this.$emit('reloaddevices')
-    this.$http.delete('http://localhost:3000/api/devices/' + this.id).then();
+    this.$http.delete('http://192.168.213.15:3000/api/devices/' + this.id).then();
     this.dialog = false
     }
   }
