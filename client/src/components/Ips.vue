@@ -47,14 +47,14 @@
       }
     },
     created() {
-      this.$http.get("http://192.168.213.15:3000/api/ips").then(function(data){
+      this.$http.get('http://'+process.env.VUE_APP_BOTURL+':3000/api/ips').then(function(data){
         this.infos = data.body //get request data and send it do return items
     });
   },
   methods: {
     deleteItem (item) {
-      this.$http.delete('http://192.168.213.15:3000/api/ips/'+item.id).then(function(){
-        this.$http.get("http://192.168.213.15:3000/api/ips").then(function(data){
+      this.$http.delete('http://'+process.env.VUE_APP_BOTURL+':3000/api/ips/'+item.id).then(function(){
+        this.$http.get('http://'+process.env.VUE_APP_BOTURL+':3000/api/ips').then(function(data){
           this.infos = data.body
         });
       });
@@ -64,7 +64,7 @@
     },
     reloadItem () {
       setTimeout(function () {
-        this.$http.get("http://192.168.213.15:3000/api/ips").then(function(data){
+        this.$http.get('http://'+process.env.VUE_APP_BOTURL+':3000/api/ips').then(function(data){
         this.infos = data.body //get request data and send it do return items
       })
     }.bind(this), 500)

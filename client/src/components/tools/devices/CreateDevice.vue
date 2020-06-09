@@ -57,7 +57,7 @@
           note: this.note,
       }
       this.$emit('reloaddevices')
-      this.$http.post('http://192.168.213.15:3000/api/devices', body).then();
+      this.$http.post('http://'+process.env.VUE_APP_BOTURL+':3000/api/devices', body).then();
       this.dialog = false
     }
   }
