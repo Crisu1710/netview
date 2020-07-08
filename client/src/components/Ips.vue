@@ -4,7 +4,7 @@
       <app-add-ip @reloadItem="reloadItem"></app-add-ip>
     </v-flex>
     <v-card-title>
-      IPs
+      IPAM
       <v-spacer></v-spacer>
       <v-text-field v-model="search" append-icon="mdi-magnify" label="Search" single-line hide-details></v-text-field>
     </v-card-title>

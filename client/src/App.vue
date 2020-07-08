@@ -46,7 +46,7 @@ export default {
       sideNav: false,
       menuItems: [
         { icon: 'exit_to_app', title: 'Components', link: '/components'},
-        { icon: 'mdi-lan', title: 'IPs', link: '/ips'},
+        { icon: 'mdi-lan', title: 'IPAM', link: '/ips'},
         { icon: 'mdi-heart', title: 'favorits', link: '/'},
       ]
     }
