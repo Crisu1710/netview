@@ -1,5 +1,6 @@
 FROM node:alpine
 MAINTAINER Robin Schneider <m2rs@posteo.de>
+RUN apk --no-cache add curl
 ENV MODE=DEV
 ENV SQL_HOST=192.168.213.15
 ENV SQL_PW=password
@@ -16,7 +17,7 @@ USER root
 RUN wget -O /dumb-init https://github.com/Yelp/dumb-init/releases/download/v1.2.1/dumb-init_1.2.1_amd64 && \
     chmod +x /dumb-init
 
-HEALTHCHECK CMD ps | grep "server/index.js" || kill 1
+HEALTHCHECK CMD curl --fail localhost:3000/api/ips || kill 1
 
 EXPOSE 5000
 EXPOSE 3000
