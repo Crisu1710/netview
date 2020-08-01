@@ -16,7 +16,7 @@ USER root
 RUN wget -O /dumb-init https://github.com/Yelp/dumb-init/releases/download/v1.2.1/dumb-init_1.2.1_amd64 && \
     chmod +x /dumb-init
 
-HEALTHCHECK CMD ps | grep server/index.js || kill 1
+HEALTHCHECK CMD ps | grep "server/index.js" || kill 1
 
 EXPOSE 5000
 EXPOSE 3000
