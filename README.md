@@ -31,6 +31,32 @@ npm install
 npm run dev
 ```
 
+## docker-compose.yml 
+```
+version: '3'
+services:
+  netview:
+    image: crisu1710/netview
+    container_name: netview
+    environment:
+      - SQL_HOST=mysql
+      - SQL_PW=PW
+    ports:
+      - 8200:5000
+      - 3000:3000
+    networks:
+      - default
+    restart: always
+```
+#### ENV
+SQL_HOST=DB_IP
+
+SQL_PW=DB_PW
+
+SQL_USER=DB_USER
+
+VUE_APP_BOTURL=DB_IP
+
 ### [nodemon] Internal watch failed: ENOSPC: System limit for number of file watchers reached, watch
 ```
 sudo sysctl fs.inotify.max_user_watches=582222 && sudo sysctl -p
