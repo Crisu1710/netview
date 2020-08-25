@@ -109,12 +109,12 @@
           color: this.editedColor,
       }
       this.$emit('reloadfavorites')
-      this.$http.put('http://'+process.env.VUE_APP_BOTURL+':3000/api/favorites/' + this.id, body).then();
+      this.$http.put('http://'+process.env.VUE_APP_BOTURL+'/api/favorites/' + this.id, body).then();
       this.dialog = false
     },
     onDelete () {
     this.$emit('reloadfavorites')
-    this.$http.delete('http://'+process.env.VUE_APP_BOTURL+':3000/api/favorites/' + this.id).then();
+    this.$http.delete('http://'+process.env.VUE_APP_BOTURL+'/api/favorites/' + this.id).then();
     this.dialog = false
     }
   },

@@ -57,7 +57,7 @@
           note: this.note,
       }
       this.$emit('reloadsubnets')
-      this.$http.post('http://'+process.env.VUE_APP_BOTURL+':3000/api/subnets', body).then();
+      this.$http.post('http://'+process.env.VUE_APP_BOTURL+'/api/subnets', body).then();
       this.dialog = false
     }
   }

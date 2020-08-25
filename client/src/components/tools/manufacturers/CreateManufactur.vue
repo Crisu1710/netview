@@ -50,7 +50,7 @@
           note: this.note,
       }
       this.$emit('reloadmanufacturers')
-      this.$http.post('http://'+process.env.VUE_APP_BOTURL+':3000/api/manufacturers', body).then();
+      this.$http.post('http://'+process.env.VUE_APP_BOTURL+'/api/manufacturers', body).then();
       this.dialog = false
     }
   }

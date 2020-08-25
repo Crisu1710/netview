@@ -63,12 +63,12 @@
           amount: this.editedAmount
       }
       this.$emit('reloaddevices')
-      this.$http.put('http://'+process.env.VUE_APP_BOTURL+':3000/api/devices/' + this.id, body).then();
+      this.$http.put('http://'+process.env.VUE_APP_BOTURL+'/api/devices/' + this.id, body).then();
       this.dialog = false
     },
     onDelete () {
     this.$emit('reloaddevices')
-    this.$http.delete('http://'+process.env.VUE_APP_BOTURL+':3000/api/devices/' + this.id).then();
+    this.$http.delete('http://'+process.env.VUE_APP_BOTURL+'/api/devices/' + this.id).then();
     this.dialog = false
     }
   }

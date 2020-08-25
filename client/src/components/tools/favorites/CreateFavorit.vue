@@ -101,7 +101,7 @@
           color: this.color,
       }
       this.$emit('reloadfavorites')
-      this.$http.post('http://'+process.env.VUE_APP_BOTURL+':3000/api/favorites', body).then();
+      this.$http.post('http://'+process.env.VUE_APP_BOTURL+'/api/favorites', body).then();
       this.dialog = false
     }
   },
