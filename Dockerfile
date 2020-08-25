@@ -5,7 +5,7 @@ ENV MODE=DEV
 ENV SQL_HOST=192.168.213.15
 ENV SQL_PW=password
 ENV SQL_USER=root
-ENV VUE_APP_BOTURL=192.168.213.15
+ENV VUE_APP_BOTURL=api.home
 RUN npm install -g serve
 WORKDIR /app
 COPY start-server.sh /start-server.sh
