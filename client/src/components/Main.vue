@@ -51,14 +51,14 @@
       }
     },
     created() {
-      this.$http.get('http://'+process.env.VUE_APP_BOTURL+':3000/api/favorites').then(function(data){
+      this.$http.get('http://'+process.env.VUE_APP_BOTURL+'/api/favorites').then(function(data){
         this.favorits = data.body //get request data and send it do return items
     });
   },
   methods: {
     reloadFavorites () {
       setTimeout(function () {
-        this.$http.get('http://'+process.env.VUE_APP_BOTURL+':3000/api/favorites').then(function(data){
+        this.$http.get('http://'+process.env.VUE_APP_BOTURL+'/api/favorites').then(function(data){
         this.favorits = data.body //get request data and send it do return items
         })
       }.bind(this), 500)
